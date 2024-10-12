@@ -8,14 +8,13 @@ on:
   pull_request:
     branches:
       - main
-      - dev
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [macos-latest, windows-latest]
 
     steps:
       - name: Checkout code
@@ -25,12 +24,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20.11.0"
-
-      - name: Install dependencies on Ubuntu
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential python3
 
       - name: Install dependencies on macOS
         if: runner.os == 'macOS'
