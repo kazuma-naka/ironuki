@@ -1,6 +1,13 @@
 # Ironuki
 
-![npm](https://img.shields.io/npm/v/ironuki) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Node Version](https://img.shields.io/node/v/ironuki) ![npm](https://img.shields.io/npm/v/ironuki) ![Build Status](https://img.shields.io/github/actions/workflow/status/kazuma-naka/ironuki/build.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![npm downloads](https://img.shields.io/npm/dt/ironuki.svg) ![Bundle Size](https://img.shields.io/bundlephobia/min/ironuki)
+
+## PreRequirement
+
+This npm package used `robotjs` to retrieve mouse cursor position. `robotjs` requires [node-gyp](https://github.com/nodejs/node-gyp).
+
+Please refer [this pre-requirement for robotjs](https://www.npmjs.com/package/robotjs#:~:text=docs/syntax.-,Building,-Please%20ensure%20you)
 
 ## Usage
 
@@ -14,10 +21,6 @@
 
    - Press **Enter** to capture the color under the mouse cursor.
    - Type `exit` to quit the program.
-
-## Building robotjs
-
-Please refer to [this pre-requirement for robotjs](https://www.npmjs.com/package/robotjs#:~:text=docs/syntax.-,Building,-Please%20ensure%20you)
 
 ## License
 

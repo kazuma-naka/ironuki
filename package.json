@@ -1,7 +1,10 @@
 {
   "name": "ironuki",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tool to capture color under the mouse cursor",
+  "engines": {
+    "node": ">=20.11.0"
+  },
   "main": "index.js",
   "bin": {
     "ironuki": "./index.js"
