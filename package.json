@@ -12,6 +12,11 @@
   ],
   "author": "Kazuma Naka",
   "license": "MIT",
+  "dependencies": {
+    "pngjs": "^7.0.0",
+    "robotjs": "^0.6.0",
+    "screenshot-desktop": "^1.15.0"
+  },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "eslint": "^9.9.0",
