@@ -1,6 +1,6 @@
 {
   "name": "ironuki",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tool to capture color under the mouse cursor",
   "main": "index.js",
   "bin": {
@@ -15,6 +15,10 @@
   ],
   "author": "Kazuma Naka",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kazuma-naka/ironuki/issues"
+  },
+  "homepage": "https://github.com/kazuma-naka/ironuki#readme",
   "dependencies": {
     "pngjs": "^7.0.0",
     "robotjs": "^0.6.0",
