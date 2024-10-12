@@ -28,11 +28,11 @@ jobs:
           brew install python@3.9
           python3 --version
 
-      - name: Install Python, make, and GCC on Ubuntu
+      - name: Install dependencies on Ubuntu
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3.9 make gcc
+          sudo apt-get install -y python3.9 make gcc libxtst-dev libx11-dev
           python3 --version
 
       - name: Install Node.js dependencies
