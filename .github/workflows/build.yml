@@ -44,6 +44,9 @@ jobs:
           choco install python visualstudio2022-workload-vctools -y
           npm config set python python3
 
+      - name: Install Node.js dependencies
+        run: npm install
+
       - name: Run npx ironuki
         run: npx ironuki
 
