@@ -32,6 +32,14 @@ jobs:
         if: runner.os == 'Windows'
         run: choco install python visualstudio2022-workload-vctools -y
 
+      - name: Download and install KB2919442 and KB2919355
+        if: runner.os == 'Windows'
+        run: |
+          Invoke-WebRequest -Uri "https://download.microsoft.com/download/2/4/4/244eae22-1a60-4b93-b3aa-1071d467f1c1/Windows8.1-KB2919442-x64.msu" -OutFile "C:\kb2919442.msu"
+          Invoke-WebRequest -Uri "https://download.microsoft.com/download/2/4/4/244eae22-1a60-4b93-b3aa-1071d467f1c1/Windows8.1-KB2919355-x64.msu" -OutFile "C:\kb2919355.msu"
+          wusa.exe C:\kb2919442.msu /quiet /norestart
+          wusa.exe C:\kb2919355.msu /quiet /norestart
+
       - name: Install Node.js dependencies
         run: npm install
 
