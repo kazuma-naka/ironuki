@@ -1,10 +1,10 @@
 {
   "name": "ironuki",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A tool to capture color under the mouse cursor",
   "main": "index.js",
   "bin": {
-    "ironuki": "node ./index.js"
+    "ironuki": "./index.js"
   },
   "scripts": {
     "fix": "prettier --write . && eslint --fix .",

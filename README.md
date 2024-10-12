@@ -1,29 +1,6 @@
-# ironuki
-
-<b>ironuki</b> is a simple tool to capture the color under the mouse cursor. Hit <b> Enter Key </b> to capture the color.
-
-Thanks for the note! I'll update the `README.md` draft to include **`pngjs`** in the acknowledgments. Here's the updated draft:
-
----
-
 # Ironuki
 
-![npm](https://img.shields.io/npm/v/ironuki)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-
-## Installation
-
-You can use `Ironuki` directly with `npx` without needing to install it globally:
-
-```bash
-npx ironuki
-```
-
-Alternatively, you can install it globally if you prefer:
-
-```bash
-npm install -g ironuki
-```
+![npm](https://img.shields.io/npm/v/ironuki) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Usage
 
@@ -37,6 +14,10 @@ npm install -g ironuki
 
    - Press **Enter** to capture the color under the mouse cursor.
    - Type `exit` to quit the program.
+
+## Building robotjs
+
+Please refer to [this pre-requirement for robotjs](https://www.npmjs.com/package/robotjs#:~:text=docs/syntax.-,Building,-Please%20ensure%20you)
 
 ## License
 
