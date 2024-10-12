@@ -28,17 +28,15 @@ jobs:
           brew install python@3.9
           sudo xcode-select --install || echo "Command Line Tools already installed"
 
-      - name: Install dependencies on Windows
-        if: runner.os == 'Windows'
-        run: choco install python visualstudio2022-workload-vctools -y
-
-      - name: Download and install KB2919442 and KB2919355
+      - name: Install Python3 on Windows
         if: runner.os == 'Windows'
         run: |
-          Invoke-WebRequest -Uri "https://download.microsoft.com/download/2/4/4/244eae22-1a60-4b93-b3aa-1071d467f1c1/Windows8.1-KB2919442-x64.msu" -OutFile "C:\kb2919442.msu"
-          Invoke-WebRequest -Uri "https://download.microsoft.com/download/2/4/4/244eae22-1a60-4b93-b3aa-1071d467f1c1/Windows8.1-KB2919355-x64.msu" -OutFile "C:\kb2919355.msu"
-          wusa.exe C:\kb2919442.msu /quiet /norestart
-          wusa.exe C:\kb2919355.msu /quiet /norestart
+          choco uninstall python python3 python312 -y || echo "No previous versions to uninstall"
+          choco install python3 -y
+
+      - name: Install Visual Studio Build Tools on Windows
+        if: runner.os == 'Windows'
+        run: choco install visualstudio2022-workload-vctools -y
 
       - name: Install Node.js dependencies
         run: npm install
