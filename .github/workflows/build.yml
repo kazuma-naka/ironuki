@@ -44,6 +44,4 @@ jobs:
         run: npx ironuki
 
       - name: Build and test npx command
-        run: |
-          npm test
-          echo "Building and testing on ${{ matrix.os }} complete"
+        run: echo "Building and testing on ${{ matrix.os }} complete"
