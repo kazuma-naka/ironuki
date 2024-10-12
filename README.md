@@ -11,8 +11,6 @@ Thanks for the note! I'll update the `README.md` draft to include **`pngjs`** in
 ![npm](https://img.shields.io/npm/v/ironuki)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-**Ironuki** is a simple tool to capture the color under the mouse cursor. This project is designed for quick and easy use directly from the command line with `npx`. It captures the screen, maps the mouse position, and extracts the RGB and HEX values of the color under the cursor.
-
 ## Installation
 
 You can use `Ironuki` directly with `npx` without needing to install it globally:
