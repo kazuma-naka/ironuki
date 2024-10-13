@@ -22,6 +22,12 @@ Please refer [this pre-requirement for robotjs](https://www.npmjs.com/package/ro
    - Press **Enter** to capture the color under the mouse cursor.
    - Type `exit` to quit the program.
 
+## GUI App Made by Electron
+
+##### GUI Installers are avaiable [in here](https://github.com/kazuma-naka/ironuki-gui/releases)
+
+please find details in [this repo](https://github.com/kazuma-naka/ironuki-gui)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
