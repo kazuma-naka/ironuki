@@ -1,8 +1,14 @@
 {
   "name": "ironuki",
-  "version": "1.0.0",
-  "description": "Display colour under mouse cursor with hex string and colour block",
+  "version": "1.0.8",
+  "description": "A tool to capture color under the mouse cursor",
+  "engines": {
+    "node": ">=20.11.0"
+  },
   "main": "index.js",
+  "bin": {
+    "ironuki": "./index.js"
+  },
   "scripts": {
     "fix": "prettier --write . && eslint --fix .",
     "lint": "prettier --check . && eslint ."
@@ -12,6 +18,15 @@
   ],
   "author": "Kazuma Naka",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kazuma-naka/ironuki/issues"
+  },
+  "homepage": "https://github.com/kazuma-naka/ironuki#readme",
+  "dependencies": {
+    "pngjs": "^7.0.0",
+    "robotjs": "^0.6.0",
+    "screenshot-desktop": "^1.15.0"
+  },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "eslint": "^9.9.0",

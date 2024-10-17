@@ -1,0 +1,45 @@
+name: Build and Test Ironuki
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js 20.11.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.11.0"
+
+      - name: Install Python 3.9 on macOS
+        if: runner.os == 'macOS'
+        run: |
+          brew install python@3.9
+          python3 --version
+
+      - name: Install dependencies on Ubuntu
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3.9 make gcc libxtst-dev libx11-dev
+          python3 --version
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Run npx ironuki
+        run: npx ironuki
+
+      - name: Build and test npx command
+        run: echo "Building and testing on ${{ matrix.os }} complete"
